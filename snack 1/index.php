@@ -6,6 +6,7 @@ Olimpia Milano - Cantù | 55-60 -->
 
 <?php
 
+// Definisco un array di partite di Basket
 $matches = [
   [
     "squadra di casa" => "Virtus Bologna",
@@ -67,7 +68,9 @@ $matches = [
     <ul class="matches-list">
       <?php
       for ($i = 0; $i < count($matches); $i++) {
+        // Per ogni partita, salvo il valore dell'array corrente in una variabile
         $match = $matches[$i];
+        // e stampo una stringa col formato <li> (Sq. di casa) - (Sq. ospite) | (punt. sq. di casa) - (punt. sq. ospite) </li>
         echo "<li>" . $match["squadra di casa"] . " - " . $match["squadra ospite"] . " | " . $match["punti squadra di casa"] . " - " . $match["punti squadra ospite"] . "</li>";
       }
       ?>
